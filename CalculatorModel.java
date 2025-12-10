@@ -3,7 +3,7 @@ package Calculator;
 import java.math.BigDecimal;
 import java.math.MathContext;
 
-public class CalculatorEngine {
+public class CalculatorModel {
 
     private BigDecimal current = BigDecimal.ZERO;
     private BigDecimal stored = BigDecimal.ZERO;

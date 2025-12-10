@@ -5,10 +5,10 @@ import java.awt.*;
 
 public class CalculatorController {
 
-    private CalculatorEngine engine;
+    private CalculatorModel engine;
     private CalculatorView view;
 
-    public CalculatorController(CalculatorEngine engine, CalculatorView view) {
+    public CalculatorController(CalculatorModel engine, CalculatorView view) {
         this.engine = engine;
         this.view = view;
         initButtons();

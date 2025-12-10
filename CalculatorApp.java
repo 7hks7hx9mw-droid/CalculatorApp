@@ -5,7 +5,7 @@ import javax.swing.SwingUtilities;
 public class CalculatorApp {
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
-            CalculatorEngine engine = new CalculatorEngine();
+            CalculatorModel engine = new CalculatorModel();
             CalculatorView view = new CalculatorView();
             new CalculatorController(engine, view);
         });
