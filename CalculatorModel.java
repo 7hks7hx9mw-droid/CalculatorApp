@@ -37,6 +37,28 @@ public class CalculatorModel {
         startNewNumber = true;
     }
 
+    public void backspace() {
+    if (startNewNumber) return;
+
+    String text = current.toPlainString();
+
+    if (text.length() <= 1 || (text.length() == 2 && text.startsWith("-"))) {
+        current = BigDecimal.ZERO;
+        startNewNumber = true;
+        return;
+    }
+
+    text = text.substring(0, text.length() - 1);
+
+    if (text.equals("-")) {
+        current = BigDecimal.ZERO;
+        startNewNumber = true;
+    } else {
+        current = new BigDecimal(text);
+    }
+}
+
+
     public void setOperation(String op) {
         if (!pendingOp.isEmpty() && !startNewNumber) {
             computeResult();

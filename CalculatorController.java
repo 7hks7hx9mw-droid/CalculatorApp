@@ -43,7 +43,7 @@ public class CalculatorController {
                     engine.clear();
                     break;
                 case "←":
-                    // Backspace 実装例（省略可能）
+                    engine.backspace();
                     break;
                 case "±":
                     engine.toggleSign();
