@@ -10,21 +10,35 @@ public class CalculatorModel {
     private String pendingOp = "";
     private boolean startNewNumber = true;
 
-    public void appendDigit(String digit) {
-        if (startNewNumber) {
-            current = new BigDecimal(digit);
-            startNewNumber = false;
-        } else {
-            current = new BigDecimal(current.toPlainString() + digit);
-        }
+public void appendDigit(String digit) {
+    if (startNewNumber) {
+        current = new BigDecimal(digit);
+        startNewNumber = false;
+        return;
     }
 
-    public void appendDot() {
-        if (!current.toPlainString().contains(".")) {
-            current = new BigDecimal(current.toPlainString() + ".");
-            startNewNumber = false;
-        }
+    String text = current.toPlainString();
+
+    // 「12.0」→「12.3」にしたいケース
+    if (text.endsWith(".0")) {
+        text = text.substring(0, text.length() - 1);
     }
+
+    current = new BigDecimal(text + digit);
+}
+
+    public void appendDot() {
+    if (startNewNumber) {
+        current = new BigDecimal("0.0");
+        startNewNumber = false;
+        return;
+    }
+
+    String text = current.toPlainString();
+    if (!text.contains(".")) {
+        current = new BigDecimal(text + ".0");
+    }
+}
 
     public void toggleSign() {
         current = current.negate();

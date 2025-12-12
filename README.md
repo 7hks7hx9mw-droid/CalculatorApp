@@ -33,7 +33,7 @@ MVC（Model / View / Controller）アーキテクチャを採用し、
 ---
 
 ## 📚 アーキテクチャ（MVC）
-─ CalculatorApp.java # アプリケーション起動クラス
-─ CalculatorModel.java # 計算ロジック（ビジネスロジック）
-─ CalculatorView.java # GUI（Swing）
-─ CalculatorController.java # 操作制御（イベント処理）
+- CalculatorApp.java # アプリケーション起動クラス
+- CalculatorModel.java # 計算ロジック（ビジネスロジック）
+- CalculatorView.java # GUI（Swing）
+- CalculatorController.java # 操作制御（イベント処理）
