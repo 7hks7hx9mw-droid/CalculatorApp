@@ -9,7 +9,7 @@ MVC（Model / View / Controller）アーキテクチャを採用し、
 
 ---
 
-## 🚀 機能一覧
+## 機能一覧
 
 - 数字入力（0〜9）
 - 四則演算（＋、−、×、÷）
@@ -23,7 +23,7 @@ MVC（Model / View / Controller）アーキテクチャを採用し、
 
 ---
 
-## 🏗 使用技術
+## 使用技術
 
 - **Java 17**
 - **Swing（GUI）**
@@ -32,8 +32,30 @@ MVC（Model / View / Controller）アーキテクチャを採用し、
 
 ---
 
-## 📚 アーキテクチャ（MVC）
-─ CalculatorApp.java # アプリケーション起動クラス
-─ CalculatorModel.java # 計算ロジック（ビジネスロジック）
-─ CalculatorView.java # GUI（Swing）
-─ CalculatorController.java # 操作制御（イベント処理）
+## アーキテクチャ（MVC）
+- CalculatorApp.java # アプリケーション起動クラス
+- CalculatorModel.java # 計算ロジック（ビジネスロジック）
+- CalculatorView.java # GUI（Swing）
+- CalculatorController.java # 操作制御（イベント処理）
+
+
+### 🔹 Model（CalculatorModel）
+- BigDecimal を利用した四則演算
+- 現在値・保存値・演算状態の管理
+- バックスペース・符号反転などの内部ロジックを実装
+
+### 🔹 View（CalculatorView）
+- Swing によるボタン配置・画面描画
+- 表示領域の更新
+
+### 🔹 Controller（CalculatorController）
+- ボタン操作を受け取り Model に処理を委譲
+- 表示更新を View に依頼
+- 明確な責務分離を意識した構造
+
+---
+
+##  画面イメージ
+
+
+<img width="335" height="423" alt="電卓App" src="https://github.com/user-attachments/assets/6c117045-3aeb-49d7-a32a-a7c7e424b369" />
