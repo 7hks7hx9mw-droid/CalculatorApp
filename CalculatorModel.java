@@ -18,8 +18,6 @@ public void appendDigit(String digit) {
     }
 
     String text = current.toPlainString();
-
-    // 「12.0」→「12.3」にしたいケース
     if (text.endsWith(".0")) {
         text = text.substring(0, text.length() - 1);
     }
